@@ -9,3 +9,5 @@ dataset*
 static/videos/*
 
 .DS_Store
+
+to_remove
