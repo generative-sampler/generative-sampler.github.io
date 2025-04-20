@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="GenS: Generative Frame Sampler for Long Video Understanding">
+  <meta property="og:title" content="GenS: Generative Frame Sampler for Long Video Understanding"/>
+  <meta property="og:description" content="GenS: Generative Frame Sampler for Long Video Understanding"/>
+  <meta property="og:url" content="https://generative-sampler.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/teaser.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="GenS: Generative Frame Sampler for Long Video Understanding">
+  <meta name="twitter:description" content="GenS: Generative Frame Sampler for Long Video Understanding">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/image/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Video Understanding, Frame Sampling, Long Video, VideoLLM, Video Large Language Models, Retrieval">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>GenS: Generative Frame Sampler for Long Video Understanding</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GenS: Generative Frame Sampler for Long Video Understanding</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://yaolinli.github.io/" target="_blank">Linli Yao</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://teowu.github.io/" target="_blank">Haoning Wu</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://ouyangkun10.github.io/" target="_blank">Kun Ouyang</a><sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=COdftTMAAAAJ&hl=en&oi=ao" target="_blank">Yuanxing Zhang</a><sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="http://cmxiong.com/" target="_blank">Caiming Xiong</a><sup>2</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://ml.cs.tsinghua.edu.cn/~beichen/" target="_blank">Bei Chen</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://xusun26.github.io/" target="_blank">Xu Sun</a><sup>1</sup><a style="color: black;">*</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=MuUhwi0AAAAJ&hl=en" target="_blank">Junnan Li</a><sup>2</sup><a style="color: black;">*</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Peking University, <sup>2</sup>Salesforce AI Research</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Authors</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+                      <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://www.arxiv.org/abs/2503.09146" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Github link -->
+                    <span class="link-block">
+                      <a href="https://github.com/yaolinli/GenS" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                      </a>
+                    </span>
+
+                    <!-- Dataset link -->
+                    <span class="link-block">
+                      <a href="https://huggingface.co/datasets/GenS/GenS-Video-150K" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>GenS-Video-150K Dataset</span>
+                      </a>
+                    </span>
+
+                    <!-- Checkpoints link -->
+                    <span class="link-block">
+                      <a href="https://huggingface.co/yaolily/GenS" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-save"></i>
+                      </span>
+                      <span>Checkpoints</span>
+                      </a>
+                    </span>
+
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container" style="padding: 20px; max-width: 1000px; margin: 0 auto;">
+    <!-- Abstract title above the image -->
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 1.5rem;">Abstract</h2>
+    
+    <div class="content has-text-justified" style="margin-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+      <p>
+        We introduce the <strong>Generative Frame Sampler (GenS)</strong>, a novel approach that identifies question-relevant frames from long videos spanning minutes to hours. Given a long video and a user question, GenS effectively searches through the original massive collection of frames to produce a concise selection and enhances the performance of downstream VideoQA Assistants (such as Qwen2-VL, LLaVA-Video, VILA-v1.5, and Aria) by providing fewer but more informative frames. To enable effective frame sampling, we present <strong>GenS-Video-150K</strong>, a synthetic VideoQA training dataset featuring <i>dense and fine-grained</i> question-relevant frame annotations.
+      </p>
+    </div>
+    <!-- Full-width teaser image with enhanced styling -->
+    <div class="hero-body" style="display: flex; justify-content: center; align-items: center; padding: 0; margin-bottom: 1rem;">
+      <img src="static/images/teaser.png" alt="GenS Teaser" style="width: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 4px;">
+    </div>
+    
+    <!-- Caption below image -->
+    <p style="font-size: 0.9rem; color: #95A5B0; margin-top: 0.5rem; margin-bottom: 2rem; text-align: left;">
+      <strong>Figure 1:</strong> <b>(left)</b> An example of Long VideoQA using different frame samplers. GenS accurately identifies relevant frame sequences based on the user question, further enhancing the performance of the downstream VideoQA assistant. <b> (right) </b> VideoQA accuracy results of state-of-the-art VideoQA assistants (Aria and GPT-4o) when equipped with GenS sampler on the LongVideoBench <i>(Vision-Centric subset)</i>.
+    </p>
+    <div class="content has-text-justified" style="margin-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;"></div>
+    <p>As shown in Figure 1 (right), by selecting more relevant visual frames, GenS significantly enhances the performance of VideoQA Assistants including Aria and GPT-4o. Compared to uniform sampling, GenS improves VideoQA model Aria's accuracy by 13.4 points (with ≤64 frames) and GPT-4o's accuracy by 13.6 points (with ≤40 frames) on the LongVideoBench (v-centric). <strong>These substantial improvements highlight that efficient long video perception is a critical bottleneck for modern VideoQA Assistants, and GenS provides a practical solution to unlock their full potential.</strong>
+        
+    </p>
+   
+    <!-- Main Results Table -->
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div style="margin-top: 2rem; margin-bottom: 2rem;">
+          <img src="static/images/table_main.png" alt="Main Results Table" style="width: 100%; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 4px;">
+          <p style="font-size: 0.9rem; color: #95A5B0; text-align: left;">
+            <strong>Table 1:</strong> Integrating GenS with different VideoQA assistants on LongVideoBench and MLVU benchmarks. Frames <i>N/M</i> indicates input N/M frames for downstream VideoQA models on LongVideoBench and MLVU respectively. 
+            Using GenS, we select the K most relevant frames (K <= max frame number of VideoQA models) and report the average number of input frames.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content has-text-justified" style="margin-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <p>
+            Extensive experiments (Table 1 and Table 2) demonstrate that GenS consistently boosts the performance of various VideoQA models, including open-source models (Qwen2-VL-7B, Aria-25B, VILA-40B, LLaVA-Video-7B/72B) and proprietary assistants (GPT-4o, Gemini1.5-pro). 
+            When equipped with GenS, open-source video language models achieve impressive state-of-the-art results on long-form video benchmarks: LLaVA-Video-72B reaches 66.8 on LongVideoBench and 77.0 on MLVU, while Aria obtains 39.2 on HourVideo, surpassing Gemini-1.5-pro by 1.9 points.
+        </p>
+    <!-- HourVideo Results Table -->
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div style="margin-top: 2rem; margin-bottom: 2rem;">
+          <img src="static/images/hourvideo.png" alt="Results on HourVideo" style="width: 100%; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 4px;">
+          <p style="font-size: 0.9rem; color: #95A5B0; text-align: left;">
+            <strong>Table 2:</strong> Results on HourVideo benchmark, an extremely challenging video dataset with an average duration of 45.7 minutes, containing 113 videos longer than 60 minutes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <!-- Full width column for key features -->
+        <div class="column is-12">
+          <div class="content">
+            <h3 class="title is-4">Technical Innovations of GenS</h3>
+            <ul class="feature-list" style="list-style-type: none; margin-left: 0;">
+                <p>GenS is built upon advanced long-context VideoLLMs (such as Aria and Qwen2.5VL), transforming key frame sampling into a generative task. Unlike CLIP-based frame samplers, GenS harnesses the inherent multi-modal capabilities of foundational VideoLLMs and introduces three key innovations:</p>
+              <li>
+                <strong>✨ Temporal Understanding:</strong>
+                <p>GenS effectively captures temporal relationships between successive frames, enabling complex reasoning about temporal sequences such as "immediately after" events in videos.</p>
+              </li>
+              <li>
+                <strong>📝  Complex Instruction Understanding:</strong>
+                <p>Powered by built-in LLMs, GenS comprehends complex and flexible textual instructions, allowing it to interpret nuanced queries and identify the most relevant visual content.</p>
+              </li>
+              <li>
+                <strong>⚡ Effective Video-Text Alignment:</strong>
+                <p>Its native multi-modal architecture enables sophisticated multi-hop reasoning by seamlessly aligning long-range temporal cues with language semantics, resulting in more accurate frame selection.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dataset Information Section -->
+<section class="section" id="dataset" style="margin-top: 2rem; margin-bottom: 2rem;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">GenS-Video-150K Dataset</h2>
+    
+    <div class="content has-text-justified" style="margin-bottom: 2rem;">
+      <p>
+        To enable effective frame sampling, we introduce <strong>GenS-Video-150K</strong>, a large-scale synthetic dataset specifically designed for training frame sampling models. Annotated by GPT-4o, this dataset has two key characteristics: <strong>1) Dense coverage</strong>: it annotates approximately 20% of all frames with relevance scores relative to specific questions. <strong>2) Fine-grained assessment</strong> with specific confidence scores (level 1 to 5) assigned to each relevant frame, providing detailed distinction of different frames.
+      </p>
+    </div>
+    
+    <!-- Card-style dataset statistics -->
+    <div class="box" style="margin-bottom: 2.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; background-color: #f9f9fd; border-top: 5px solid #95A5B0;">
+        <h4 class="title is-5" style="margin-bottom: 1rem;">Data Statistics:</h4>
+        <ul style="list-style-type: disc; margin-left: 2rem; font-size: 1.1rem;">
+          <li style="margin-bottom: 1rem;">
+            <strong>Format:</strong> {video, question, answer, scored relevant frames}
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <strong>#Total Samples:</strong> 150K
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <strong>Avg Video Duration:</strong> 647.5 seconds (~10.8 minutes)
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <strong>#QA Task Number:</strong> 12
+          </li>
+          <!-- <li style="margin-bottom: 1rem;">
+            <strong>Avg Captioned Frames per Video:</strong> 129.5
+          </li> -->
+          <li style="margin-bottom: 1rem;">
+            <strong>Relevant Frame Rate:</strong> ~20%
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <strong>Relevant Scores:</strong> 0-5 (0 is non-relevant, 5 is most relevant)
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Dataset Example Visualization -->
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified" style="margin-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <p>
+          We visualize an annotation example from GenS-Video-150K dataset. For each video-question pair, we annotate frames with fine-grained relevance scores from 0 (irrelevant) to 5 (highly relevant).
+        </p>
+      </div>
+      
+      <div style="margin-bottom: 2.5rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <img src="static/images/data_case.png" alt="GenS-Video-150K Dataset Examples" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Dataset Section -->
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Extensive Analysis</h2>
+      
+      <div class="content has-text-justified" style="margin-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;"></div>
+      <h3 class="title is-4">Combined with CLIP</h3>
+    </div>
+  </div>
+</section> -->
+<!-- End image carousel -->
+
+<!--BibTeX citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{yao2025generative,
+    title={Generative Frame Sampler for Long Video Understanding},
+    author={Yao, Linli and Wu, Haoning and Ouyang, Kun and Zhang, Yuanxing and Xiong, Caiming and Chen, Bei and Sun, Xu and Li, Junnan},
+    journal={arXiv preprint arXiv:2503.09146},
+    year={2025}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+<!-- Acknowledgement section -->
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      <strong>Usage and License Notices:</strong> The data, code and checkpoints are intended and licensed for research use only. They are also restricted to uses that follow the license agreements of the respective datasets and models used in this work.
+    </p>
+    <p>
+      <strong>Related Projects:</strong> 
+      <a href="https://github.com/rhymes-ai/Aria" target="_blank">Aria</a>, 
+      <a href="https://github.com/QwenLM/Qwen2.5-VL" target="_blank">Qwen2.5VL</a>, 
+      <a href="" target="_blank">LongVideoBench</a>, 
+      <a href="https://github.com/JUNJIE99/MLVU" target="_blank">MLVU</a>,
+      <a href="https://github.com/keshik6/HourVideo" target="_blank">HourVideo</a>
+    </p>
+  </div>
+</section>
+<!-- End Acknowledgement section -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+</html>
