@@ -3,17 +3,9 @@ overleaf*
 dataset*
 
 *.pdf
-*.png
-*.jpg
-*.jpeg
+
 *.gif
 
-*.mp4
-*.avi
-*.mov
-*.webm
-*.mkv
-*.flv
-*.wmv
+static/videos/*
 
 .DS_Store
