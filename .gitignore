@@ -11,3 +11,6 @@ static/videos/*
 .DS_Store
 
 to_remove
+
+hf_readme.md
+hf_*
